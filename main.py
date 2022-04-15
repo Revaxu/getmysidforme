@@ -1,14 +1,20 @@
 import os
+import socket
+import threading
 from flask import Flask, request
-os.system("pip install -U amino.fix.py")
+os.system("pip install -U amino.fix")
 import aminofix as amino
-app = Flask(__name__)
+app = Flask(name)
 
+@app.route("/")
+def n():
+        z="hello,app by revax ,don't try to change any thing,cuz all this in my host,and if u have any proplem pm amino"
+        return z
 
 @app.route("/myname")
 def revax():
-        print="hello,app by revax ,don't try to change any thing,cuz all this in my host,and if u have any proplem pm amino"
-        return print
+        g="hello,app by revax ,don't try to change any thing,cuz all this in my host,and if u have any proplem pm amino"
+        return g
 
 @app.route("/sid", methods=['POST',"GET"])
 def sidz():
@@ -20,5 +26,5 @@ def sidz():
        return sid
        print(sid)
        
-if __name__ == '__main__':
-    app.run("0.0.0.0", 9833)
+if name == 'main':
+ app.run("0.0.0.0", 9833)
